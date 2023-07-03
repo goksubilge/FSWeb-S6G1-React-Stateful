@@ -28978,7 +28978,7 @@ function Sayac() {
   }, /*#__PURE__*/_react.default.createElement("h2", null, "Saya\xE7"), /*#__PURE__*/_react.default.createElement("div", {
     id: "sayici",
     style: stil
-  }, "Say\u0131 ", sayici, " ", sayici % 2 === 0 ? 'even' : 'odd' /* ADIM 3  buraya*/), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
+  }, "Say\u0131 ", sayici, " ", sayici % 2 === 0 ? 'çift' : 'tek' /* ADIM 3  buraya*/), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
     id: "artirici",
     onClick: artirici
   }, "Art\u0131r\u0131c\u0131"), /*#__PURE__*/_react.default.createElement("button", {
@@ -29136,7 +29136,7 @@ function RuhHalleri() {
   var stil = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'royalblue' /* ADIM 2 */
+    color: ruhHali === mutluRuhHali ? 'royalblue' : 'crimson' /* ADIM 2 */
   };
 
   return /*#__PURE__*/_react.default.createElement("div", {
@@ -29144,7 +29144,7 @@ function RuhHalleri() {
   }, /*#__PURE__*/_react.default.createElement("h2", null, "RuhHalleri"), /*#__PURE__*/_react.default.createElement("div", {
     id: "ruhHali",
     style: stil
-  }, "'Nas\u0131l hissetti\u011Fimi bilmiyorum :-|'"), " ", /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
+  }, ruhHali), " ", /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
     id: "mutluEt",
     onClick: mutluEt
   }, "Mutlu Et"), /*#__PURE__*/_react.default.createElement("button", {
@@ -29213,7 +29213,7 @@ function Dondurucu() {
     dondurucuAcik = _useState2[0],
     setdondurucuAcik = _useState2[1];
   var toggleDondurucu = function toggleDondurucu() {
-    /* ADIM 4 */setdondurucuAcik(!!dondurucuAcik);
+    /* ADIM 4 */setdondurucuAcik(!dondurucuAcik);
   };
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "widget-spinner container"

@@ -57,13 +57,13 @@ export default function RuhHalleri() {
   const stil = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'royalblue', /* ADIM 2 */
+    color: ruhHali === mutluRuhHali ? 'royalblue' : 'crimson' /* ADIM 2 */
   };
 
   return (
     <div className='widget-moods container'>
       <h2>RuhHalleri</h2>
-	<div id='ruhHali' style={stil}>'Nasıl hissettiğimi bilmiyorum :-|'</div> {/* ADIM 3 */}
+	<div id='ruhHali' style={stil}>{ruhHali}</div> {/* ADIM 3 */}
       <div>
         <button id='mutluEt' onClick={mutluEt}>Mutlu Et</button>
         <button id='uz' onClick={uZ}>Üz</button>
