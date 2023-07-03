@@ -36,6 +36,8 @@ ADIM 4:
 */
 
 import React from 'react'; /* STEP 0 */
+import { useState } from 'react';
+
 
 export default function Dondurucu() {
 /* ADIM 1 */
