@@ -46,22 +46,23 @@ ADIM 6:
 */
 
 import React from 'react'; /* ADIM 0 buraya*/ 
-import { useState } from "react"; 
+import { useState } from 'react'; 
 
 export default function Sayac() {
   /* ADIM 1 buraya*/
-  const [sayac,setSayac] = useState(0);
+  const [sayici,setSayici] = useState(0);
 	
 	
   const artirici = () => {
     /* ADIM 4 buraya */
-    setSayac(sayac + 1)
+    setSayici(sayici + 1)
   };
   const azaltici = () => {
-    /* ADIM 5 */setSayac(sayac - 1)
+    /* ADIM 5 */
+    setSayici(sayici - 1)
   };
   const reset = () => {
-    setSayac (1)
+    setSayici (0)
   };
 
   const stil = {
@@ -74,7 +75,7 @@ export default function Sayac() {
     <div className='widget-counter container'>
       <h2>Sayaç</h2>
       <div id='sayici' style={stil}>
-        Sayı {sayici} { sayici % 2 === 0 ? 'odd' : 'even' /* ADIM 3  buraya*/ }
+        Sayı {sayici} { sayici % 2 === 0 ? 'even' : 'odd' /* ADIM 3  buraya*/ }
       </div>
       <div>
         <button id='artirici' onClick={artirici}>Artırıcı</button>

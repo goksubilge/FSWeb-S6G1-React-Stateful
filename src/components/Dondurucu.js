@@ -41,19 +41,20 @@ import { useState } from 'react';
 
 export default function Dondurucu() {
 /* ADIM 1 */
+const [dondurucuAcik, setdondurucuAcik] = useState (true)
 
   const toggleDondurucu = () => {
-  /* ADIM 4 */
+  /* ADIM 4 */setdondurucuAcik (!!dondurucuAcik)
   };
 
   return (
     <div className='widget-spinner container'>
       <h2>Döndürücü</h2>
       {
-        true && <div id='döndürücü' className='spinner'>--+--</div> /* ADIM 2 */
+        dondurucuAcik && <div id='döndürücü' className='spinner'>--+--</div> /* ADIM 2 */
       }
       <button id='toggleDondurucu' onClick={toggleDondurucu}>
-         Gizle {/* STEP 3 */}
+         Gizle {dondurucuAcik ? 'show' : 'hide' /* STEP 3 */}
       </button>
     </div>
   );
