@@ -29197,7 +29197,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; } /*
                                                                         sağdaki değer tüm ifadenin değeri olur. '&&'nin her iki tarafında bir ifade varsa
                                                                         ve false sa, soldaki tüm satırın değeri olur. 
                                                                       
-                                                                        Sabit yazılmış 'true' döndürücü açık veya kapalı durumuna göre değiştirin.
+                                                                        Sabit yazılmış 'true' yu döndürücü açık veya kapalı durumuna göre değiştirin.
                                                                       
                                                                       ADIM 3:
                                                                         'döndürücüAçık' değerine bağlı olarak "Gizle" veya "Göster" metni oluşturmak için button içinde bir ifade kullanın.
@@ -29213,17 +29213,21 @@ function Dondurucu() {
     dondurucuAcik = _useState2[0],
     setdondurucuAcik = _useState2[1];
   var toggleDondurucu = function toggleDondurucu() {
-    /* ADIM 4 */setdondurucuAcik(!dondurucuAcik);
+    /* ADIM 4 */
+    setdondurucuAcik(!dondurucuAcik);
   };
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "widget-spinner container"
-  }, /*#__PURE__*/_react.default.createElement("h2", null, "D\xF6nd\xFCr\xFCc\xFC"), dondurucuAcik && /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("h2", null, "D\xF6nd\xFCr\xFCc\xFC"), /*true vardı burda, onu döndürücüaçık olarak değiştirdim*/dondurucuAcik &&
+  /*#__PURE__*/
+  /* ve ifadesi olduğu için gerisinin önemi kalmadı. döndürücü açıkken ne yapacaksa onu yapacak çünkü bu div in içindeki ifade(condition) false kaldı şuanda artık*/
+  _react.default.createElement("div", {
     id: "d\xF6nd\xFCr\xFCc\xFC",
     className: "spinner"
-  }, "--+--") /* ADIM 2 */, /*#__PURE__*/_react.default.createElement("button", {
+  }, "--+--") /* ADIM 2 yi tamamlamış oldum */, /*#__PURE__*/_react.default.createElement("button", {
     id: "toggleDondurucu",
     onClick: toggleDondurucu
-  }, "Gizle ", dondurucuAcik ? 'show' : 'hide' /* STEP 3 */));
+  }, dondurucuAcik ? 'gizle' : 'göster' /* STEP 3 */));
 }
 },{"react":"../node_modules/react/index.js"}],"components/Kareler.js":[function(require,module,exports) {
 "use strict";

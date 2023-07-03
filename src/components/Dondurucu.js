@@ -25,7 +25,7 @@ ADIM 2:
   sağdaki değer tüm ifadenin değeri olur. '&&'nin her iki tarafında bir ifade varsa
   ve false sa, soldaki tüm satırın değeri olur. 
 
-  Sabit yazılmış 'true' döndürücü açık veya kapalı durumuna göre değiştirin.
+  Sabit yazılmış 'true' yu döndürücü açık veya kapalı durumuna göre değiştirin.
 
 ADIM 3:
   'döndürücüAçık' değerine bağlı olarak "Gizle" veya "Göster" metni oluşturmak için button içinde bir ifade kullanın.
@@ -44,17 +44,20 @@ export default function Dondurucu() {
 const [dondurucuAcik, setdondurucuAcik] = useState (true)
 
   const toggleDondurucu = () => {
-  /* ADIM 4 */setdondurucuAcik (!dondurucuAcik)
+  /* ADIM 4 */
+  setdondurucuAcik (!dondurucuAcik)
   };
 
   return (
     <div className='widget-spinner container'>
       <h2>Döndürücü</h2>
       {
-        dondurucuAcik &&  <div id='döndürücü' className='spinner'>--+--</div> /* ADIM 2 */
+        /*true vardı burda, onu döndürücüaçık olarak değiştirdim*/ dondurucuAcik &&  
+        /* ve ifadesi olduğu için gerisinin önemi kalmadı. döndürücü açıkken ne yapacaksa onu yapacak çünkü bu div in içindeki ifade(condition) false kaldı şuanda artık*/
+        <div id='döndürücü' className='spinner'>--+--</div> /* ADIM 2 yi tamamlamış oldum */
       }
       <button id='toggleDondurucu' onClick={toggleDondurucu}>
-         Gizle {dondurucuAcik ? 'show' : 'hide' /* STEP 3 */}
+          {dondurucuAcik ? 'gizle' : 'göster' /* STEP 3 */}
       </button>
     </div>
   );
