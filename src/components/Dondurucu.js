@@ -44,14 +44,14 @@ export default function Dondurucu() {
 const [dondurucuAcik, setdondurucuAcik] = useState (true)
 
   const toggleDondurucu = () => {
-  /* ADIM 4 */setdondurucuAcik (!!dondurucuAcik)
+  /* ADIM 4 */setdondurucuAcik (!dondurucuAcik)
   };
 
   return (
     <div className='widget-spinner container'>
       <h2>Döndürücü</h2>
       {
-        dondurucuAcik && <div id='döndürücü' className='spinner'>--+--</div> /* ADIM 2 */
+        dondurucuAcik &&  <div id='döndürücü' className='spinner'>--+--</div> /* ADIM 2 */
       }
       <button id='toggleDondurucu' onClick={toggleDondurucu}>
          Gizle {dondurucuAcik ? 'show' : 'hide' /* STEP 3 */}
