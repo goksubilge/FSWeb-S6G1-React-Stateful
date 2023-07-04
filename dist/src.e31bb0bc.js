@@ -29042,20 +29042,23 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; } /*
 
 function Input() {
   /* ADIM 1 */
-  var _useState = (0, _react.useState)(""),
+  var _useState = (0, _react.useState)(" "),
     _useState2 = _slicedToArray(_useState, 2),
     inputDegeri = _useState2[0],
     setInputDegeri = _useState2[1];
-  var inputuDeğiştir = function inputuDeğiştir(evt) {
+  var inputuDegistir = function inputuDegistir(evt) {
+    // !!!!!!  BENCE BU ADIM 4 ÖNEMLİ   !!!!!!
     // When the input changes, its whole value can be found inside the event object.
     // Log out the synthetic event object 'evt' and see for yourself.
     var value = evt.target.value;
 
     /* ADIM 4 */
+    console.log(value);
+    setInputDegeri(value);
   };
-
   var reset = function reset() {
     /* ADIM 5 */
+    setInputDegeri(" ");
   };
   var stil = {
     fontSize: '1.5em',
@@ -29068,12 +29071,12 @@ function Input() {
   }, /*#__PURE__*/_react.default.createElement("h2", null, "Input"), /*#__PURE__*/_react.default.createElement("div", {
     id: "output",
     style: stil
-  }, inputDegeri.toUpperCase), " ", /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("input", {
+  }, "  ", inputDegeri.toUpperCase(), "  "), " ", /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("input", {
     id: "input",
     type: "text",
-    onChange: inputuDeğiştir,
+    onChange: inputuDegistir,
     value: inputDegeri
-  }), " ", "", " ", /*#__PURE__*/_react.default.createElement("button", {
+  }), " ", " ", "  ", /*#__PURE__*/_react.default.createElement("button", {
     id: "resetInput",
     onClick: reset
   }, "Reset")));
@@ -29432,7 +29435,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55121" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54641" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
