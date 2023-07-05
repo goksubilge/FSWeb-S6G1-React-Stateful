@@ -15,6 +15,7 @@ Aşaıdaki yorumları takip edin.
 */
 
 import React from 'react';
+import { useState } from 'react';
 
 
 //Bu değişkeni YALNIZCA bir durum dilimini yüklemek için kullanın!
@@ -27,19 +28,49 @@ export default function Kareler() {
   // 'aktifKare' olmak üzere. Birisi kare idlerini _dizi_ olarak tutacak, diğeri ise aktif olan
   // kareyi gözlemleyecek. Sayfa yüklendiğinde aktif kare olmayacak,
   // yani  'aktifKare' null olmalı.
+
+  const [kareler,setKareler] = useState(KareIdListesi);
+  const [aktifKare, setAktifKareler] = useState(null);
+
 	
   const ClassAdiAl = id => {
     // Bu bir click handler değildir, JSX içinde kullanılan bir yardımcıdır(helper).(aşağıya bakın)
     // Eğer argüman olarak verilen id aktif kare state'indeki id ile eşleşirse, class adı 'active' olan bir string döndürecek
     // diğer durumlar için boş döndürecek.
     // Etkisini görmek için kareye sağ tıklayın ve "öğeyi inceleyin".
-	return ''
+    /*
+    uzun çözüm:
+    if (id === aktifKare) {
+      return "active";
+      {return " "  }
+    } */
+	return id === aktifKare ? 'active' : " ";
   };
 
   const AktifEt = id => {
+    console.log (id)
     // Bu bir _satır içinden çağırılmış_ click handler yardımcısıdır.
     // id bağımsız değişkenini, stateteki aktif id olacak şekilde ayarlayın
     // eğer zaten aktifse, o zaman önce state i resetlemeliyiz.
+    // NOT: burda bir toggle yapıcaz if ile
+    return aktifKare === id ? setAktifKareler(null) : setAktifKareler(id)
+    /*  
+    //// ALTERNATİF ÇÖZÜM
+    if (aktifKare === id) {
+      return SetAktifKareler(null);
+      burda tercihen başka metod da kullanabilirdim:
+      1. 
+      const newKareListesi = [...kareler]
+      newKareListesi.push ("sqG")
+      setKareler(newKareListesi);
+      2.
+      setKareler ([...kareler, "sqG"]);
+
+    } else {
+      return setAktifKareler(id);
+    }
+
+    */
   };
 
   return (
@@ -47,10 +78,11 @@ export default function Kareler() {
       <h2>Kareler</h2>
       <div className='squares'>
         {
-          // Kötü bug!  'KareIdListesi' yerine bir state dilimi kullanmalıyız.
+          // Kötü bug!  'KareIdListesi' yerine bir state dilimi kullanmalıyız.(/// NOTUM /// kareIdListesi.map 
+          //dört kare içinde statikti. Kareler.map yazarak yeni kare ekleyebileceğiimiz şekilde dinamik yaptık)
           // Şöyle diyebiliriz: "aa bu çalışıyor!" Ama kareler bir state diliminden gelmiyorsa,
           // asla yeni kare ekleyemeyiz, kareleri düzenleyemeyiz ya da silemeyiz. Düzeltin!
-          KareIdListesi.map(id =>
+          kareler.map(id =>
             <div
               id={id}
               key={id}
