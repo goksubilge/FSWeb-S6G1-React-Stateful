@@ -82,6 +82,7 @@ export default function Kareler() {
           //dört kare içinde statikti. Kareler.map yazarak yeni kare ekleyebileceğiimiz şekilde dinamik yaptık)
           // Şöyle diyebiliriz: "aa bu çalışıyor!" Ama kareler bir state diliminden gelmiyorsa,
           // asla yeni kare ekleyemeyiz, kareleri düzenleyemeyiz ya da silemeyiz. Düzeltin!
+          //Not: iki eksende de boyut varsa CSS'de grid ile tanımlıyoruz. tek eksende genelde flex.
           kareler.map(id =>
             <div
               id={id}
