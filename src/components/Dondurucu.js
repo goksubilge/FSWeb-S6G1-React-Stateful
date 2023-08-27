@@ -35,29 +35,31 @@ ADIM 4:
   "not" için kullandığımız operatörü hatırlıyor musunuz??
 */
 
-import React from 'react'; /* STEP 0 */
-import { useState } from 'react';
-
+import React from "react"; /* STEP 0 */
+import { useState } from "react";
 
 export default function Dondurucu() {
-/* ADIM 1 */
-const [dondurucuAcik, setdondurucuAcik] = useState (true)
+  /* ADIM 1 */
+  const [dondurucuAcik, setdondurucuAcik] = useState(true);
 
   const toggleDondurucu = () => {
-  /* ADIM 4 */
-  setdondurucuAcik (!dondurucuAcik)
+    /* ADIM 4 */
+    setdondurucuAcik(!dondurucuAcik);
   };
 
   return (
-    <div className='widget-spinner container'>
+    <div className="widget-spinner container">
       <h2>Döndürücü</h2>
       {
-        /*true vardı burda, onu döndürücüaçık olarak değiştirdim*/ dondurucuAcik &&  
+        /*true vardı burda, onu döndürücüaçık olarak değiştirdim*/ dondurucuAcik && (
+          <div id="döndürücü" className="spinner">
+            --+--
+          </div>
+        ) /* ADIM 2 yi tamamlamış oldum */
         /* ve ifadesi olduğu için gerisinin önemi kalmadı. döndürücü açıkken ne yapacaksa onu yapacak çünkü bu div in içindeki ifade(condition) false kaldı şuanda artık*/
-        <div id='döndürücü' className='spinner'>--+--</div> /* ADIM 2 yi tamamlamış oldum */
       }
-      <button id='toggleDondurucu' onClick={toggleDondurucu}>
-          {dondurucuAcik ? 'gizle' : 'göster' /* STEP 3 */}
+      <button id="toggleDondurucu" onClick={toggleDondurucu}>
+        {dondurucuAcik ? "gizle" : "göster" /* STEP 3 */}
       </button>
     </div>
   );

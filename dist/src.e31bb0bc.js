@@ -29230,16 +29230,14 @@ function Dondurucu() {
   };
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "widget-spinner container"
-  }, /*#__PURE__*/_react.default.createElement("h2", null, "D\xF6nd\xFCr\xFCc\xFC"), /*true vardı burda, onu döndürücüaçık olarak değiştirdim*/dondurucuAcik &&
-  /*#__PURE__*/
-  /* ve ifadesi olduğu için gerisinin önemi kalmadı. döndürücü açıkken ne yapacaksa onu yapacak çünkü bu div in içindeki ifade(condition) false kaldı şuanda artık*/
-  _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("h2", null, "D\xF6nd\xFCr\xFCc\xFC"), /*true vardı burda, onu döndürücüaçık olarak değiştirdim*/dondurucuAcik && /*#__PURE__*/_react.default.createElement("div", {
     id: "d\xF6nd\xFCr\xFCc\xFC",
     className: "spinner"
-  }, "--+--") /* ADIM 2 yi tamamlamış oldum */, /*#__PURE__*/_react.default.createElement("button", {
+  }, "--+--") /* ADIM 2 yi tamamlamış oldum */
+  /* ve ifadesi olduğu için gerisinin önemi kalmadı. döndürücü açıkken ne yapacaksa onu yapacak çünkü bu div in içindeki ifade(condition) false kaldı şuanda artık*/, /*#__PURE__*/_react.default.createElement("button", {
     id: "toggleDondurucu",
     onClick: toggleDondurucu
-  }, dondurucuAcik ? 'gizle' : 'göster' /* STEP 3 */));
+  }, dondurucuAcik ? "gizle" : "göster" /* STEP 3 */));
 }
 },{"react":"../node_modules/react/index.js"}],"components/Kareler.js":[function(require,module,exports) {
 "use strict";
