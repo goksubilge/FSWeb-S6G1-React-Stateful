@@ -29270,7 +29270,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; } /*
                                                                       Aşaıdaki yorumları takip edin.
                                                                       */
 //Bu değişkeni YALNIZCA bir durum dilimini yüklemek için kullanın!
-var KareIdListesi = ['sqA', 'sqB', 'sqC', 'sqD'];
+var KareIdListesi = ["sqA", "sqB", "sqC", "sqD"];
 function Kareler() {
   // State hookunu 2 defa kullanın: 'kareler' ve
   // 'aktifKare' olmak üzere. Birisi kare idlerini _dizi_ olarak tutacak, diğeri ise aktif olan
@@ -29296,7 +29296,7 @@ function Kareler() {
       return "active";
       {return " "  }
     } */
-    return id === aktifKare ? 'active' : " ";
+    return id === aktifKare ? "active" : " ";
   };
   var AktifEt = function AktifEt(id) {
     console.log(id);
@@ -29327,11 +29327,12 @@ function Kareler() {
   }, /*#__PURE__*/_react.default.createElement("h2", null, "Kareler"), /*#__PURE__*/_react.default.createElement("div", {
     className: "squares"
   },
-  // Kötü bug!  'KareIdListesi' yerine bir state dilimi kullanmalıyız.(/// NOTUM /// kareIdListesi.map 
+  // Kötü bug!  'KareIdListesi' yerine bir state dilimi kullanmalıyız.(/// NOTUM /// kareIdListesi.map
   //dört kare içinde statikti. Kareler.map yazarak yeni kare ekleyebileceğiimiz şekilde dinamik yaptık)
   // Şöyle diyebiliriz: "aa bu çalışıyor!" Ama kareler bir state diliminden gelmiyorsa,
   // asla yeni kare ekleyemeyiz, kareleri düzenleyemeyiz ya da silemeyiz. Düzeltin!
   //Not: iki eksende de boyut varsa CSS'de grid ile tanımlıyoruz. tek eksende genelde flex.
+  // burda kareIdListesi dizisi vardı sabit, onu kareler ile değiştirdim. (useState teki ile)dinamik oldu yani.
   kareler.map(function (id) {
     return /*#__PURE__*/_react.default.createElement("div", {
       id: id,
