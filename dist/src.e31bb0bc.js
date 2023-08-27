@@ -29124,9 +29124,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; } /*
                                                                       ADIM 4, 5, 6:
                                                                         Click handler içinde `setRuhHali` ni kulanarak aşağıda tanımlanmış değişkenleri kullanarak ruhHali'ni güncelleyin
                                                                       */ /* ADIM 0 */
-var ilkRuhHali = 'Nasıl hissettiğimi bilmiyorum :-|';
-var mutluRuhHali = 'Oldukça mutlu :)';
-var uzgunRuhHali = 'Oldukça üzgün :(';
+var ilkRuhHali = "Nasıl hissettiğimi bilmiyorum :-|";
+var mutluRuhHali = "Oldukça mutlu :)";
+var uzgunRuhHali = "Oldukça üzgün :(";
 function RuhHalleri() {
   /* ADIM 1 */
   var _useState = (0, _react.useState)(ilkRuhHali),
@@ -29146,9 +29146,9 @@ function RuhHalleri() {
     setRuhHali(ilkRuhHali);
   };
   var stil = {
-    fontSize: '1.5em',
-    marginBottom: '0.3em',
-    color: ruhHali === mutluRuhHali ? 'royalblue' : 'crimson' /* ADIM 2 */
+    fontSize: "1.5em",
+    marginBottom: "0.3em",
+    color: ruhHali === mutluRuhHali ? "royalblue" : "crimson" /* ADIM 2 */
   };
 
   return /*#__PURE__*/_react.default.createElement("div", {
