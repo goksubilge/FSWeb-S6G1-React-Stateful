@@ -29042,7 +29042,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; } /*
 
 function Input() {
   /* ADIM 1 */
-  var _useState = (0, _react.useState)(" "),
+  var _useState = (0, _react.useState)(""),
     _useState2 = _slicedToArray(_useState, 2),
     inputDegeri = _useState2[0],
     setInputDegeri = _useState2[1];
@@ -29053,17 +29053,17 @@ function Input() {
     var value = evt.target.value;
 
     /* ADIM 4 */
-    console.log(value);
+    // console.log(value);
     setInputDegeri(value);
   };
   var reset = function reset() {
     /* ADIM 5 */
-    setInputDegeri(" ");
+    setInputDegeri("");
   };
   var stil = {
-    fontSize: '1.5em',
-    marginBottom: '0.3em',
-    color: inputDegeri.length > 10 ? 'crimson' : 'royalblue' /* ADIM 2 */
+    fontSize: "1.5em",
+    marginBottom: "0.3em",
+    color: inputDegeri.length > 10 ? "crimson" : "royalblue" /* ADIM 2 */
   };
 
   return /*#__PURE__*/_react.default.createElement("div", {
@@ -29071,12 +29071,12 @@ function Input() {
   }, /*#__PURE__*/_react.default.createElement("h2", null, "Input"), /*#__PURE__*/_react.default.createElement("div", {
     id: "output",
     style: stil
-  }, "  ", inputDegeri.toUpperCase(), "  "), " ", /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("input", {
+  }, inputDegeri.toUpperCase()), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("input", {
     id: "input",
     type: "text",
     onChange: inputuDegistir,
     value: inputDegeri
-  }), " ", " ", "  ", /*#__PURE__*/_react.default.createElement("button", {
+  }), /*#__PURE__*/_react.default.createElement("button", {
     id: "resetInput",
     onClick: reset
   }, "Reset")));
