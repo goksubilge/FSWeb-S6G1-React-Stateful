@@ -28968,9 +28968,9 @@ function Sayac() {
     setSayici(0);
   };
   var stil = {
-    fontSize: '1.5em',
-    marginBottom: '0.3em',
-    color: sayici % 2 === 0 ? 'royalblue' : 'crimson' /* ADIM 2 */
+    fontSize: "1.5em",
+    marginBottom: "0.3em",
+    color: sayici % 2 === 0 ? "royalblue" : "crimson" /* ADIM 2 */
   };
 
   return /*#__PURE__*/_react.default.createElement("div", {
@@ -28978,7 +28978,7 @@ function Sayac() {
   }, /*#__PURE__*/_react.default.createElement("h2", null, "Saya\xE7"), /*#__PURE__*/_react.default.createElement("div", {
     id: "sayici",
     style: stil
-  }, "Say\u0131 ", sayici, " ", sayici % 2 === 0 ? 'çift' : 'tek' /* ADIM 3  buraya*/), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
+  }, "Say\u0131 ", sayici, " ", sayici % 2 === 0 ? "çift" : "tek" /* ADIM 3  buraya*/), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
     id: "artirici",
     onClick: artirici
   }, "Art\u0131r\u0131c\u0131"), /*#__PURE__*/_react.default.createElement("button", {
